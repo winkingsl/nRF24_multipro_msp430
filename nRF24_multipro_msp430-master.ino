@@ -46,10 +46,10 @@
 //SPI Comm.pins with nRF24L01
 #define MOSI_pin  P2_0  // MOSI 
 #define SCK_pin   P2_1  // SCK  
-#define CE_pin    P2_2  // CE 
-#define MISO_pin  P2_3 // MISO 
+#define CE_pin    P2_3  // CE 
+#define MISO_pin  P2_2 // MISO 
 #define CS_pin    P2_4 // CS   
-#define ledPin    P1_4 // LED  
+#define ledPin    P1_0 // LED  
 
 
 // SPI outputs
@@ -57,12 +57,12 @@
 #define MOSI_off P2OUT &= ~_BV(0)// P2_0
 #define SCK_on P2OUT |= _BV(1)// P2_1
 #define SCK_off P2OUT &= ~_BV(1)// P2_1
-#define CE_on P2OUT |= _BV(2)// P2_2
-#define CE_off P2OUT &= ~_BV(2)// P2_2
+#define CE_on P2OUT |= _BV(3)// P2_3
+#define CE_off P2OUT &= ~_BV(3)// P2_3
 #define CS_on P2OUT |= _BV(4)// P2_4
 #define CS_off P2OUT &= ~_BV(4) // P2_4
 // SPI input
-#define  MISO_on (P2IN & _BV(3)) // P2_3
+#define  MISO_on (P2IN & _BV(2)) // P2_2
 
 #define RF_POWER TX_POWER_80mW 
 
